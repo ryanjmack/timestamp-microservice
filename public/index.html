@@ -8,10 +8,32 @@
 	<!-- UNCOMMENT when a favicon is added to the root of src/ -->
 	<!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> -->
 	<title>API Timestamp Microservice</title>
-	<link rel="stylesheet" href="./stylesheets/styles.css">
+	<link rel="stylesheet" href="stylesheets/css/styles.css">
 </head>
 
 <body>
-  <h1>Test</h1>
+  <main>
+    <h1>Unix Timestamp Microservice</h1>
+    <h2>Documentation</h2>
+    <ol>
+      <li>The API endpoint is <span class="code">/api/timestamp/:date_string?</span></li>
+      <li><b>A date string is valid if it is one of the following</b>:
+        <ul>
+          <li>An ISO-8601 date respresentation in the format YYYY-MM-DD (Ex: 2018-12-25)</li>
+          <li>The number of seconds after the Unix Epoch (Ex: 1545696000)</li>
+        </ul>
+      </li>
+      <li>If the datestring is <b>empty</b>, the currrent timestamp will be used.</li>
+      <li>If the date is <b>valid</b> it will return JSON in the format: <span class="code">{"unix": "Unix Timestamp", "utc": "UTC String"}</span></li>
+      <li>If the date is <b>invalid</b> it will return JSON in the format: <span class="code">{"error": "Invalid Date"}</span></li>
+    </ol>
+    <section class="example">
+      <h3>Examples of usage</h3>
+      <a href='api/timestamp/2018-12-25'>api/timestamp/2018-12-25</a>
+      <a href='api/timestamp/1545696001'>api/timestamp/1545696000</a>
+      <h3>Example Output</h3>
+      <span class="code">{"unix": "1545696000", "utc": "Tue, 25 Dec 2018 00:00:00 GMT"}</span>
+    </section>
+  </main>
 </body>
 </html>

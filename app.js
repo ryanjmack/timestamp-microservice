@@ -1,20 +1,23 @@
+
 // entry point
 const express = require('express');
 const app     = express();
+app.use(express.static(__dirname + '/public'));
 
 
 app.get('/', (req, res) => {
-  res.send('Testing!');
+  res.sendFile('index.html');
 });
 
 
 app.get('/api/timestamp/', (req, res) => {
-  res.json({"message": "Hello json"});
+  res.json({"message": new Date().toString()});
+
 });
 
 
 app.get('*', (req, res) => {
-  res.status(404).send("ERROR!");
+  res.status(404).sendFile("index.html", {root: 'public'});
 });
 
 
