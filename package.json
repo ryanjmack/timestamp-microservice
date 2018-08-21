@@ -1,0 +1,14 @@
+{
+  "name": "timestampmicroservice",
+  "version": "1.0.0",
+  "description": "Dependencies for a small Node.js application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ryan Mack",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
