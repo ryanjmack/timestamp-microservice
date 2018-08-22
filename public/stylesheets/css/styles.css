@@ -57,16 +57,31 @@ main {
   color: #d400a4;
   padding: 0.1em 0.2em; }
 
-.example a {
-  color: #0078ff;
-  display: block;
-  margin: 1em 0;
-  text-decoration: none; }
-  .example a:first-of-type {
-    margin-top: 0; }
-
-.example h3 {
-  margin-bottom: 0.5em;
-  margin-top: 2em; }
+.example {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .example a {
+    color: #0078ff;
+    display: inline-block;
+    margin: 1em 0;
+    text-decoration: none; }
+    .example a:first-of-type {
+      margin-top: 0; }
+    .example a:last-of-type {
+      margin-bottom: 0; }
+  .example h3 {
+    margin-bottom: 0.5em;
+    margin-top: 2em; }
+  .example p {
+    margin: 0.7em 0; }
+    .example p:first-of-type {
+      margin-top: 0; }
+    .example p:last-of-type {
+      margin: 0; }
 
 /*# sourceMappingURL=styles.css.map */
