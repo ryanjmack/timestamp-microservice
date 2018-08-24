@@ -31,7 +31,7 @@ body {
 
 main {
   font-size: 1rem;
-  max-width: 50em;
+  max-width: 51em;
   padding: 1em 1em 2em;
   width: 100%; }
   @media (min-width: 25em) {
